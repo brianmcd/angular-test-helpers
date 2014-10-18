@@ -49,4 +49,9 @@ module.exports = {
   // Continuous Integration mode
   // if true, Karma captures browsers, runs the tests and exits
   singleRun: false
+}
+
+if (process.env.TRAVIS) {
+  // Travis doesn't have Chrome installed.
+  module.exports.browsers = ['Firefox'];
 };
