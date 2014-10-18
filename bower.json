@@ -16,14 +16,15 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test"
+    "test",
+    "package.json",
+    "karma.conf.js",
+    "gulpfile.js"
   ],
   "devDependencies": {
     "angular": "1.2.25",
     "angular-mocks": "1.2.25",
-    "jasmine-jquery": "1.7.0"
-  },
-  "dependencies": {
+    "jasmine-jquery": "1.7.0",
     "jquery": "~2.1.1"
   }
 }
