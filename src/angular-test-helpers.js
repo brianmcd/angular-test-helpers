@@ -3,7 +3,7 @@
 
 /**
  * Creates a directive to poke at with tests.
- * 
+ *
  * @param {string} template - The template for the directive.
  * @returns {Object} jQuery/jqLite element
  *
@@ -15,8 +15,9 @@
 window.createDirective = function (template) {
   var elem;
   inject(function ($compile, $rootScope) {
-    elem = $compile(template)($rootScope);
-    $rootScope.$digest();
+    var scope = $rootScope.$new();
+    elem = $compile(template)(scope);
+    scope.$digest();
   });
   return elem;
 };
